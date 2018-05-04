@@ -4,7 +4,7 @@ _forked from benyanke/nextcloud_
 
 [![](https://images.microbadger.com/badges/version/benyanke/nextcloud.svg)](http://microbadger.com/images/benyanke/nextcloud "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/benyanke/nextcloud.svg)](http://microbadger.com/images/benyanke/nextcloud "Get your own image badge on microbadger.com")
 
-![](https://s32.postimg.org/69nev7aol/Nextcloud_logo.png)
+![](https://raw.githubusercontent.com/benyanke/docker-nextcloud/master/assets/nextcloud.png)
 
 
 ### Features
