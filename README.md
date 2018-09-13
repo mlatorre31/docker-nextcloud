@@ -23,9 +23,10 @@ _forked from wonderfall/nextcloud_
 
 ### Tags
 - **latest** : latest stable version. (13.0)
+  - container for 14.0 to be switched to latest once tested
+- **14.0** : latest 14.0.x version (in-testing)
 - **13.0** : latest 13.0.x version (stable)
-- **12.0** : latest 12.0.x version (old stable)
-- **daily** : latest code (daily build).
+- **daily** : latest code (daily build)
 
 For security reasons, you should occasionally update the container, even if you have the latest version of Nextcloud. Images are built on a regular schedule, to keep underlying dependencies up to date.
 
