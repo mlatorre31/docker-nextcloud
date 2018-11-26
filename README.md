@@ -21,12 +21,11 @@ _forked from wonderfall/nextcloud_
 - No root processes. Never.
 - Environment variables provided (see below).
 
-### Tags
-- **latest** : latest stable version. (13.0)
-  - container for 14.0 to be switched to latest once tested
-- **14.0** : latest 14.0.x version (in-testing)
-- **13.0** : latest 13.0.x version (stable)
-- **daily** : latest code (daily build)
+### Docker Tags
+- **latest** : latest stable version. (14)
+- **14** : latest 14.0.x version (stable)
+- **13** : latest 13.0.x version (not tested heavily but stable - recommended to upgrade to 14)
+- **nightly** : latest code from NextCloud, unstable
 
 For security reasons, you should occasionally update the container, even if you have the latest version of Nextcloud. Images are built on a regular schedule, to keep underlying dependencies up to date.
 
