@@ -37,7 +37,14 @@ if [ ! -f /config/config.php ]; then
     # New installation, run the setup
     /usr/local/bin/setup.sh
 else
+    # Run upgrade if applicable
     occ upgrade
+
+    # Add missing indexes
+    occ db:add-missing-indices
+
+    # Convert filecache fields
+    occ db:convert-filecache-bigint
 fi
 
 exec su-exec $UID:$GID /bin/s6-svscan /etc/s6.d
