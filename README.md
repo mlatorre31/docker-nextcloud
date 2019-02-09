@@ -22,10 +22,9 @@ _forked from wonderfall/nextcloud_
 - Environment variables provided (see below).
 
 ### Docker Tags
-- **latest** : latest stable version. (14)
+- **latest** : latest stable version. (15)
 - **15** : latest 15.0.x version (NC stable but this container umage still untested and therefore unstable)
 - **14** : latest 14.0.x version (stable)
-- **13** : latest 13.0.x version (not tested heavily but stable - recommended to upgrade to 14)
 - **nightly** : latest code from NextCloud, unstable
 
 For security reasons, you should occasionally update the container, even if you have the latest version of Nextcloud. Images are built on a regular schedule, to keep underlying dependencies up to date.
