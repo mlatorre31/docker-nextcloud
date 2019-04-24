@@ -47,4 +47,9 @@ else
     occ db:convert-filecache-bigint
 fi
 
+# Run auto update
+if [ "$APP_AUTO_UPDATE" = "1" ] ; then
+  occ app:update --all
+fi
+
 exec su-exec $UID:$GID /bin/s6-svscan /etc/s6.d

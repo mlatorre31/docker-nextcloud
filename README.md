@@ -53,6 +53,7 @@ For security reasons, you should occasionally update the container, even if you 
 - **DB_PASSWORD** : password for database user *(default : none)*
 - **DB_HOST** : database host *(default : none)*
 - **PERMISSION_RESET** : Set to 0 to disable permission fixing on container boot - can be useful if you have a large install and wish to handle permissions manually *(default : 1)*
+- **APP_AUTO_UPDATE** : Set to 1 to enable app auto update on container restart *(default : 0)*
 
 Don't forget to use a **strong password** for the admin account!
 
@@ -156,6 +157,7 @@ services:
       - DB_USER=nextcloud
       - DB_PASSWORD=supersecretpassword
       - DB_HOST=nextcloud-db
+      - APP_AUTO_UPDATE=1
     volumes:
       - /docker/nextcloud/data:/data
       - /docker/nextcloud/config:/config
