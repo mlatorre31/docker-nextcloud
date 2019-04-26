@@ -23,7 +23,8 @@ _forked from wonderfall/nextcloud_
 
 ### Docker Tags
 - **latest** : latest stable version. (15)
-- **15** : latest 15.0.x version (NC stable but this container umage still untested and therefore unstable)
+- **16** : latest 16.0.x version (NC stable, this container image beta)
+- **15** : latest 15.0.x version (stable)
 - **14** : latest 14.0.x version (stable)
 - **nightly** : latest code from NextCloud, unstable
 
