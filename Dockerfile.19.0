@@ -33,7 +33,7 @@ RUN apk -U upgrade \
     imagemagick-dev \
     libtool \
     make \
-    bcmath \
+    php7-bcmath \
  && pecl install \
     smbclient \
     apcu \
