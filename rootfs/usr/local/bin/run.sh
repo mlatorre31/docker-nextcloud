@@ -19,20 +19,28 @@ if [ ! -d /data/session ]; then
 fi
 
 
+export dirsToFix="/nextcloud /data /config /apps2 /var/log /php /nginx /tmp /etc/s6.d"
+#export dirsToFix="/nextcloud /data /config /apps2 /var/log /php /nginx /tmp /etc/s6.d"
+
 if [ "$PERMISSION_RESET" = "1" ] ; then
-  echo "Updating permissions..."
-  for dir in /nextcloud /data /config /apps2 /var/log /php /nginx /tmp /etc/s6.d; do
-    if $(find $dir ! -user $UID -o ! -group $GID|egrep '.' -q); then
-      echo "Updating permissions in $dir..."
-      chown -R $UID:$GID $dir
-    else
-      echo "Permissions in $dir are correct."
-    fi
-  done
-  echo "Done updating permissions."
+  export dirsToFix="/nextcloud /data /config /apps2 /var/log /php /nginx /tmp /etc/s6.d"
 else
-  echo "Not updating permissions since \$PERMISSION_RESET was not '1'";
+  export dirsToFix="/nextcloud /config /apps2 /var/log /php /nginx /tmp /etc/s6.d"
+  echo "Not updating permissions on /data directory since \$PERMISSION_RESET was not '1'";
 fi
+
+echo "Updating permissions..."
+for dir in $dirsToFix; do
+  echo "Handling permissions in $dir"
+  if $(find $dir ! -user $UID -o ! -group $GID|egrep '.' -q); then
+    echo "Updating permissions in $dir..."
+    chown -R $UID:$GID $dir
+  else
+    echo "Permissions in $dir are correct."
+  fi
+done
+echo "Done updating permissions."
+
 if [ ! -f /config/config.php ]; then
     # New installation, run the setup
     /usr/local/bin/setup.sh
