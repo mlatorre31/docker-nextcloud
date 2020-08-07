@@ -18,10 +18,6 @@ if [ ! -d /data/session ]; then
   mkdir -p /data/session;
 fi
 
-
-export dirsToFix="/nextcloud /data /config /apps2 /var/log /php /nginx /tmp /etc/s6.d"
-#export dirsToFix="/nextcloud /data /config /apps2 /var/log /php /nginx /tmp /etc/s6.d"
-
 if [ "$PERMISSION_RESET" = "1" ] ; then
   export dirsToFix="/nextcloud /data /config /apps2 /var/log /php /nginx /tmp /etc/s6.d"
 else
