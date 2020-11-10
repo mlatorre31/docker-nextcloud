@@ -13,7 +13,7 @@ ENV UID=991 GID=991 \
     TZ=Etc/UTC \
     DB_TYPE=sqlite3 \
     DOMAIN=localhost \
-    PERMISSION_RESET=1
+    PERMISSION_RESET=1 \
 
 RUN apk -U upgrade \
  && apk add -t build-dependencies \
