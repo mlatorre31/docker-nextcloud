@@ -31,7 +31,6 @@ RUN apk -U upgrade \
     libsmbclient \
     tzdata \
     ffmpeg \
-    imagemagick \
     php7-bcmath \
  && pecl install \
     smbclient \
